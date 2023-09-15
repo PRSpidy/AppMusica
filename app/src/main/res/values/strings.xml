@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AppMusica</string>
+    <string name="nombre_cancion">Yonaguni</string>
+    <string name="nombre_cancante">Bad Bunny</string>
 </resources>

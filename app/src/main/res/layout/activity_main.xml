@@ -4,15 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageViewYonaguni"
+        android:layout_width="259dp"
+        android:layout_height="282dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewNombreCancion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/Yonaguni"
+        android:contentDescription="TODO" />
+
     <TextView
+        android:id="@+id/textViewNombreCancion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewCanctante"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewYonaguni"
+        tools:text="@string/nombre_cancion" />
+
+    <TextView
+        android:id="@+id/textViewCanctante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre_cancante"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarSong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNombreCancion" />
+
+    <SeekBar
+        android:id="@+id/seekBarSong"
+        android:layout_width="257dp"
+        android:layout_height="30dp"
+        android:progress="25"
+        android:progressBackgroundTint="@color/white"
+        android:thumbTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarVolume"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCanctante" />
+
+    <SeekBar
+        android:id="@+id/seekBarVolume"
+        android:layout_width="257dp"
+        android:layout_height="30dp"
+        android:progress="70"
+        android:progressBackgroundTint="@color/white"
+        android:thumbTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/seekBarSong" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
