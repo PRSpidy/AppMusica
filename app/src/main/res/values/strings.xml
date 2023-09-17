@@ -2,4 +2,10 @@
     <string name="app_name">AppMusica</string>
     <string name="nombre_cancion">Yonaguni</string>
     <string name="nombre_cancante">Bad Bunny</string>
+    <string name="todo">TODO</string>
+    <string name="tiempoPasado">0:42</string>
+    <string name="tiempoRestante">-2:46</string>
+    <string name="compartir">Compartir</string>
+    <string name="letra">Letra</string>
+    <string name="cola">Cola</string>
 </resources>

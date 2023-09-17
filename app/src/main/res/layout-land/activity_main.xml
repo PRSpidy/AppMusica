@@ -12,21 +12,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="80dp"
         android:text="@string/tiempoRestante"
         app:layout_constraintBottom_toTopOf="@+id/seekBarSong"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textViewTiempoPasado"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewYonaguni" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageViewYonaguni"
-        android:layout_width="259dp"
-        android:layout_height="282dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="227dp"
+        android:layout_height="229dp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/textViewNombreCancion"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/invisibleLine"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/yonaguni" />
@@ -39,7 +38,7 @@
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textViewCanctante"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/invisibleLine"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewYonaguni" />
 
@@ -47,12 +46,11 @@
         android:id="@+id/textViewCanctante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="19dp"
         android:text="@string/nombre_cancante"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/seekBarSong"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/invisibleLine"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNombreCancion" />
 
@@ -65,8 +63,8 @@
         android:thumbTint="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/buttonBack"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCanctante" />
+        app:layout_constraintStart_toEndOf="@+id/invisibleLine"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <SeekBar
         android:id="@+id/seekBarVolume"
@@ -77,41 +75,36 @@
         android:thumbTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/invisibleLine"
         app:layout_constraintTop_toBottomOf="@+id/seekBarSong" />
 
     <Button
         android:id="@+id/buttonPlay"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="75dp"
         android:backgroundTint="@color/grey"
         android:foreground="@drawable/jugar"
         app:layout_constraintBottom_toTopOf="@+id/seekBarVolume"
         app:layout_constraintEnd_toStartOf="@+id/buttonNext"
         app:layout_constraintStart_toEndOf="@+id/buttonBack"
-        app:layout_constraintTop_toBottomOf="@+id/seekBarSong" />
+        app:layout_constraintTop_toBottomOf="@+id/seekBarSong"
+        tools:ignore="DuplicateClickableBoundsCheck" />
 
     <Button
         android:id="@+id/buttonBack"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="75dp"
         android:backgroundTint="@color/grey"
         android:foreground="@drawable/atras"
         app:layout_constraintBottom_toTopOf="@+id/seekBarVolume"
         app:layout_constraintEnd_toStartOf="@+id/buttonPause"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/invisibleLine"
         app:layout_constraintTop_toBottomOf="@+id/seekBarSong" />
 
     <Button
         android:id="@+id/buttonNext"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="75dp"
         android:backgroundTint="@color/grey"
         android:foreground="@drawable/siguiente"
         app:layout_constraintBottom_toTopOf="@+id/seekBarVolume"
@@ -123,8 +116,6 @@
         android:id="@+id/buttonPause"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="75dp"
         android:backgroundTint="@color/grey"
         android:foreground="@drawable/pausa"
         app:layout_constraintBottom_toTopOf="@+id/seekBarVolume"
@@ -136,13 +127,13 @@
         android:id="@+id/textViewTiempoPasado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
         android:layout_marginEnd="35dp"
         android:text="@string/tiempoPasado"
         app:layout_constraintBottom_toTopOf="@+id/seekBarSong"
         app:layout_constraintEnd_toStartOf="@+id/textViewTiempoRestante"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewYonaguni" />
+        app:layout_constraintStart_toEndOf="@+id/invisibleLine"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageViewMute"
@@ -152,7 +143,7 @@
         android:layout_marginBottom="41dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonCompartir"
         app:layout_constraintEnd_toStartOf="@+id/imageViewVolume"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/invisibleLine"
         app:layout_constraintTop_toBottomOf="@+id/seekBarVolume"
         app:srcCompat="@drawable/mute" />
 
@@ -178,7 +169,7 @@
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonVerLetra"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/invisibleLine"
         app:layout_constraintTop_toBottomOf="@+id/seekBarVolume" />
 
     <Button
@@ -206,5 +197,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonVerLetra"
         app:layout_constraintTop_toBottomOf="@+id/seekBarVolume" />
+
+    <View
+        android:id="@+id/invisibleLine"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
