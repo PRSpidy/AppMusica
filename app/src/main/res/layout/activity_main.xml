@@ -170,11 +170,11 @@
 
     <Button
         android:id="@+id/buttonCompartir"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginTop="50dp"
-        android:backgroundTint="@color/black_grey"
-        android:text="@string/compartir"
+        android:backgroundTint="@color/grey"
+        android:foreground="@drawable/compartir"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonVerLetra"
@@ -183,11 +183,11 @@
 
     <Button
         android:id="@+id/buttonVerLetra"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginTop="50dp"
-        android:backgroundTint="@color/black_grey"
-        android:text="@string/letra"
+        android:backgroundTint="@color/grey"
+        android:foreground="@drawable/letracancion"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonCola"
@@ -196,11 +196,11 @@
 
     <Button
         android:id="@+id/buttonCola"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginTop="50dp"
-        android:backgroundTint="@color/black_grey"
-        android:text="@string/cola"
+        android:backgroundTint="@color/grey"
+        android:foreground="@drawable/cola"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
